@@ -1,14 +1,11 @@
 {
-  "name": "hello-world-azure-app-main",
+  "name": "hello-world-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple Node.js app for the TeleMedPilot Cloud Lab.",
   "main": "app.js",
   "scripts": {
-  "start": "node app.js",
-},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+    "start": "node app.js"
+  },
   "dependencies": {
     "express": "^4.18.2"
   }
