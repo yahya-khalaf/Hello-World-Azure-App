@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - Helloworld
+name: Build and deploy Node.js app to Azure Web App - helloworld
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '22.x'
+          node-version: '20.x'
 
       - name: npm install, build, and test
         run: |
@@ -60,15 +60,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B01508D116AC42EE8D9D9909524F2E74 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_864F69681A8B4EC398E93F96A3D854F5 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_3358B67C569D4BFAA3901B46F441742D }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_79D4F67CC7714A2DA103296997FE9B93 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_434170076689463480962B41E98494E9 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_626D310CC649461387066993F2425CEB }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'Helloworld'
+          app-name: 'helloworld'
           slot-name: 'Production'
           package: .
           
